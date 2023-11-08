@@ -1,0 +1,17 @@
+.hero {
+    height: '270px';
+    width: '1440px';
+    background-color: var(--css-black);
+}
+.hero-item {
+    display:flex;
+    width: '799px';
+    height: '212px';
+    border-color: aqua;
+    align-items: center;
+    justify-content: center;
+}
+.para {
+    color:white;
+    font-weight: 600;
+}
