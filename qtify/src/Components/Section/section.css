@@ -1,0 +1,17 @@
+.title {
+    font-size: 20px;
+    color: var(--css-white);
+    margin-bottom:20px;
+}
+
+.card-container {
+    display: flex;
+    column-gap: 42px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+ 
+}
+.section {
+    padding: 10px 32px;
+    width:100%;
+}

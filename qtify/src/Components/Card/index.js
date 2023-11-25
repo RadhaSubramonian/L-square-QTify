@@ -7,31 +7,25 @@ import { CardActionArea } from '@mui/material';
 import { green } from '@mui/material/colors';
 
 
-export default (props) => {
+export default ({
+    imgSrc,
+    followersCount,
+    label
+    
+}) => {
     return (
-        <>
-        <Card style={{maxWidth: '159px',height:'205px'}}>
-            <CardActionArea style={{  border: '1px solid green',borderRadius:'70px',borderRadius:'6px',height:'205px'}} >
-                <CardMedia
-                    component="img"
-                    height="170"
-                    width="159"
-                
-                    image={props.img}
-                    alt="green iguana"
-                />
-                <CardContent style={{height:'35px'}}>
-                    <Typography gutterBottom style={{height:'23px',width:'100px',border: '1px solid green',left:'6px',top:'176px',borderRadius:'10px',position:'absolute',padding:'1px 1px 1px 2px',backgroundColor:'black',color:'white'}}>
-                    {props.followers}
-                    </Typography>
-                </CardContent>
-            </CardActionArea>
-
-        </Card>
-         <p  style={{ padding:'2px',height:'30px'}}>
-            {props.title}
-         </p>
-     </>
-   
+        <div className="card-wrapper">
+            <div className="card">
+                <div className='card-img-frame'>
+                    <img src={imgSrc} className='card-img'/>
+                </div>
+                <div className='card-content'>
+                    <div className="card-content-pill">
+                        <span>{followersCount}</span>
+                    </div>
+                </div>
+            </div>
+            <p className="card-label">{label}</p>
+     </div>
     )
 }
