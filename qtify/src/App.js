@@ -7,6 +7,7 @@ import Section from './Components/Section'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import FilterSection from './Components/FilterSection';
+import Accordion from './Components/Accordion';
 
 
 const ENDPOINT = 'https://qtify-backend-labs.crio.do/'
@@ -40,7 +41,7 @@ function App() {
   },[])
   return (
     <>
-      <Navbar />
+      <Navbar data={topAlbums}/>
       <Hero />
       <Section title= 'Top Albums' data={topAlbums}/>
       <Section title= 'New Albums' data={newAlbums}/>
@@ -54,6 +55,8 @@ function App() {
         }
       }}
       />
+      <Accordion />
+      
     </>
   );
 }
