@@ -21,7 +21,7 @@ export default ({
                 </div>
                 <div className='card-content'>
                     <div className="card-content-pill">
-                        <span>{followersCount}</span>
+                        <span>{followersCount} follows</span>
                     </div>
                 </div>
             </div>
