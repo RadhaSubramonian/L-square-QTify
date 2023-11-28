@@ -20,6 +20,7 @@ export default ({ title, data}) => {
                             imgSrc={cardData.image}
                             label = {cardData.title}
                             followersCount={cardData.follows}
+                            songs={cardData.songs}
                 />)}
             </div>
             } 

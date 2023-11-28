@@ -18,6 +18,11 @@
     border-radius: 10px;
    
 }
+.tooltip {
+    color: white;
+    top:-60px;
+    position: relative;
+}
 .card-label {
     height: 30px;
     color: var(--css-white);

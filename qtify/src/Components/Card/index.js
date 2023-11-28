@@ -5,27 +5,34 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { green } from '@mui/material/colors';
+import { useState } from 'react';
+import Tooltip from '@mui/material/Tooltip';
 
 
 export default ({
     imgSrc,
     followersCount,
-    label
-    
+    label,
+    songs
 }) => {
+
     return (
-        <div className="card-wrapper">
-            <div className="card">
-                <div className='card-img-frame'>
-                    <img src={imgSrc} className='card-img'/>
-                </div>
-                <div className='card-content'>
-                    <div className="card-content-pill">
-                        <span>{followersCount} follows</span>
+        <>
+            <Tooltip title={`${songs && Object.keys(songs).length} songs`} placement="top-start">
+                <div className="card-wrapper" >
+                    <div className="card" >
+                        <div className='card-img-frame'>
+                            <img src={imgSrc} className='card-img'/>
+                        </div>
+                        <div className='card-content'>
+                            <div className="card-content-pill">
+                                <span>{followersCount} follows</span>
+                            </div>
+                        </div>
                     </div>
+                    <p className="card-label">{label}</p>
                 </div>
-            </div>
-            <p className="card-label">{label}</p>
-     </div>
+            </Tooltip>
+     </>
     )
 }
